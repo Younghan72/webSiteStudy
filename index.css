@@ -1,0 +1,187 @@
+:root{
+    --main-color: #5d9ab3;
+    --accent-color: #bf7785;
+    --dark-color: #2b5566;
+    --text-bright-color: #fff;
+    --icon-bk-color: #ddd;
+    --icon-color: #fff;
+    --large-width: 1000px
+}
+body{
+    font-family: '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
+    margin: 0;
+}
+.conA{
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(img/main.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    color: var(--text-bright-color);
+}
+.conA img{
+    width: 20%;
+}
+.conA h1{
+    font-size: 15vw;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.2em;
+    margin-left: 0.2em;
+}
+.conA p{
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+.conA a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: solid 3px currentColor;
+    border-radius: 6px;
+    background-color: var(--accent-color);
+    color: var(--text-bright-color);
+    font-size: 15px;
+    text-decoration: none;
+}
+.conA a:hover{
+    background-image: linear-gradient(
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.2)
+    );
+}
+.conB h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.conB p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.8; 
+}
+.conB a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+.conB .icon{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 40px;
+    width: 2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--icon-bk-color);
+    color: var(--icon-color);
+}
+.conB .container{
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.conB .text {
+    text-align: center;
+    padding: 0 20px 60px 20px;
+}
+.conB a:hover{
+    text-decoration: underline;
+}
+.conC{
+    background-color: var(--main-color);
+    color: var(--text-bright-color);
+}
+.conC .photo, .conD .photo{
+    background-image: url('img/note.jpg'); 
+    background-position: center;
+    background-size: cover;
+    min-height: 200px;
+}
+.conD .photo{
+    background-image: url('img/juce.jpg');
+}
+.conC .text, .conD .text{
+    padding: 20px;
+}
+.conC h2, .conD h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.conC p, .conD p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.8; 
+}
+.conC a, .conD a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: solid 3px currentColor;
+    border-radius: 6px;
+    background-color: var(--accent-color);
+    color: var(--text-bright-color);
+    font-size: 15px;
+    text-decoration: none;
+}
+.conC a:hover, .conD a:hover{
+    background-image: linear-gradient(
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.2)
+    );
+}
+.conD a{
+    box-shadow: 0 0 0 1px #888888;
+}
+.conD .container{
+    padding-top: 2px
+}
+@media (min-width:768px){
+    .conA h1{
+        font-size: 115px;
+    }
+    .conA p{
+        font-size: 24px;
+    }
+    .conB .container{
+        display: flex;
+        max-width: var(--large-width);
+        margin: 0 auto;
+    }
+    .conB .text{
+        flex: 1;
+    }
+    .conC .container, .conD .container{
+        display: flex;
+        max-width: var(--large-width);
+        margin: 0 auto;
+    }
+    .conC .photo, .conD .photo{
+        flex: 3;
+    }
+    .conC .text, .conD .text{
+        flex: 2;
+        padding: 50px;
+    }
+    .conD .container{
+        padding: 40px 0;
+        flex-direction: row-reverse;
+    }
+    .conD .photo{
+        flex: 0 0 400px;
+    }
+    .conD ,.text{
+        flex: 1;
+    }
+}
