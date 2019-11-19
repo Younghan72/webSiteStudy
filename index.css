@@ -147,6 +147,61 @@ body{
 .conD .container{
     padding-top: 2px
 }
+.footA{
+    margin-bottom: 30px;
+}
+.footA h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: 'Montserrat', 'sans-serif';
+    letter-spacing: 0.2em;
+}
+.footA p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.footA a{
+    color: inherit;
+    text-decoration: none;
+}
+.footB h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: solid 1px currentColor;
+    font-size: 14px;
+}
+.footB ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footB a{
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+.footB a:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.footB div{
+    margin-bottom: 20px;
+}
+.footC{
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Montserrat', 'sans-serif';
+}
+footer{
+    color: var(--text-bright-color);
+    background-color: var(--dark-color);
+}
+footer .container{
+    padding: 40px 20px;
+}
 @media (min-width:768px){
     .conA h1{
         font-size: 115px;
@@ -183,5 +238,28 @@ body{
     }
     .conD ,.text{
         flex: 1;
+    }
+    .footB{
+        display: flex;
+    }
+    .footB div{
+        flex: 1;
+    }
+    .footB div:not(:first-child){
+        margin-left: 40px;
+    }
+    footer .container{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .footA{
+        flex: 0 0 40%;
+    }
+    .footB{
+        flex: 0 0 60%;
+    }
+    .footC{
+        flex: 0 0 100%;
     }
 }
