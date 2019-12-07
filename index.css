@@ -5,7 +5,9 @@
     --text-bright-color: #fff;
     --icon-bk-color: #ddd;
     --icon-color: #fff;
-    --large-width: 1000px
+    --gray-color: #ddd;
+    --middle-width: 800px;
+    --large-width: 1000px;
 }
 header{
     position: absolute;
@@ -14,6 +16,10 @@ header{
     z-index: 100;
     width: 100%;
     background-color: rgba(255,255,255,0.9);
+}
+.noHero header{
+    position: static;
+    border-bottom:  solid 1px var(--gray-color);
 }
 .headA{
     display: inline-block;
@@ -261,6 +267,48 @@ footer{
 footer .container{
     padding: 40px 20px;
 }
+.post .container{
+    padding: 30px 10px;
+    max-width: var(--middle-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+.post h1{
+    font-size:  2rem;
+    padding-left: 0.5rem;
+    border-left: solid 0.75rem var(--accent-color);
+    
+}
+.post p{
+    font-size: 1rem;
+    line-height: 2;
+}
+.post img{
+    max-width: 100%;
+}
+.bread ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+.bread a{
+    color: inherit;
+    font-size: 0.875rem;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+.bread a:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+.bread a::after{
+    margin-left: 10px;
+    content: '\f054';
+    font-family: 'FontAwesome';
+    opacity: 0.3;
+
+}
 @media (max-width:767px){
     header .container-small{
         display: flex;
@@ -359,5 +407,20 @@ footer .container{
     }
     .footC{
         flex: 0 0 100%;
+    }
+}
+@media (max-width: 599px){
+    :root{
+        font-size: 14px;
+    }
+}
+@media (min-width:600px) and (max-width: 799px){
+    :root{
+        font-size: 16px;
+    }
+}
+@media (min-width: 800px){
+    :root {
+        font-size: 18px;
     }
 }
