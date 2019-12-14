@@ -307,7 +307,40 @@ footer .container{
     content: '\f054';
     font-family: 'FontAwesome';
     opacity: 0.3;
-
+}
+.history{
+    background-color: var(--main-color);
+    color: var(--text-bright-color);
+}
+.history .text{
+    padding: 20px;
+}
+.history h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+.history .photo{
+    min-height: 300px;
+    background-image: url(img/history.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.history table{
+    border-collapse: collapse;
+    border-top: solid 1px var(--gray-color);
+    font-size: 0.875rem;
+}
+.history th, .history td{
+    border-bottom: solid 1px var(--gray-color);
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}
+.history th{
+    padding-right: 1rem;
+    text-align: left;
+    word-break: keep-all;
+    white-space: nowrap;
 }
 @media (max-width:767px){
     header .container-small{
@@ -333,6 +366,19 @@ footer .container{
     }
 }
 @media (min-width:768px){
+    .history .container{
+        display: flex;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .history .photo{
+        flex: 3;
+    }
+    .history .text{
+        flex: 2;
+        padding: 50px;
+    }
     header .container{
         display: flex;
         align-items: center;
